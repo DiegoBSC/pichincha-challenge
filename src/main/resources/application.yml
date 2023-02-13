@@ -28,4 +28,3 @@ server:
   error:
     include-stacktrace: never
     path: never
-maxDailyQuote: 1000

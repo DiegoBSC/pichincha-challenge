@@ -38,11 +38,7 @@ class MovementServiceImplTest {
 
     @Test
     void createMovement_whenMovementTypeIsDebit_thenReturnMovementDto() {
-        MovementDto movementDto = new MovementDto();
-        movementDto.setMovementType(MovementTypeEnum.DEBITO);
-        movementDto.setMovementValue(new BigDecimal(100));
-        movementDto.setMovementDate(LocalDateTime.now());
-        movementDto.setBalanceAvailable(new BigDecimal(100));
+        MovementDto movementDto = getMovementDto();
 
         Account account = getAccount();
 
@@ -80,5 +76,14 @@ class MovementServiceImplTest {
         account.setId(UUID.randomUUID());
         account.setInitialBalance(new BigDecimal(200));
         return account;
+    }
+
+    private MovementDto getMovementDto(){
+        MovementDto movementDto = new MovementDto();
+        movementDto.setMovementType(MovementTypeEnum.DEBITO);
+        movementDto.setMovementValue(new BigDecimal(100));
+        movementDto.setMovementDate(LocalDateTime.now());
+        movementDto.setBalanceAvailable(new BigDecimal(100));
+        return movementDto;
     }
 }
