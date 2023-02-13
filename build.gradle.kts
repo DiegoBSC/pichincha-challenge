@@ -27,9 +27,9 @@ dependencies {
 	implementation("org.flywaydb:flyway-core")
 	implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.0.2")
 	implementation("org.modelmapper:modelmapper:3.1.1")
+	runtimeOnly("com.h2database:h2")
 	compileOnly("org.projectlombok:lombok")
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
-	runtimeOnly("org.postgresql:postgresql")
 	annotationProcessor("org.projectlombok:lombok")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
